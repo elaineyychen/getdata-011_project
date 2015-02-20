@@ -62,10 +62,7 @@ run_analysis <- function(){
   result <- dcast(md,subject+activity~variable,mean)
   # final result (long-tidy form)
   # result <- melt(result,id=c("subject","activity"))
-  
-  print(result)
-  ### write the result into txt file
-  ##write.table(result, file="./data/result.txt", row.names=FALSE)
-  
+
+  result
 }
 
