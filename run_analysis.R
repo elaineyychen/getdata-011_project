@@ -60,8 +60,8 @@ run_analysis <- function(){
   # casts the data frame
   # final result (wide-tidy form)
   result <- dcast(md,subject+activity~variable,mean)
-  # final result (long-tidy form)
-  # result <- melt(result,id=c("subject","activity"))
+  # final result (long-tidy form, my final result)
+  result <- melt(result,id=c("subject","activity"))
 
   result
 }
